@@ -1,0 +1,47 @@
+.ui-layout-north {
+	background-image: url("../images/all-sports-banner.png");
+	background-repeat: no-repeat;
+	background-position: center 20%;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	background: inherit;
+}
+
+.logo {
+	padding: 10px;
+}
+
+.loginInfo {
+	width: auto;
+	float: right;
+}
+
+.loginInfo tbody td {
+	text-align: right;
+}
+
+.loginInfo .loginName {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.homeDiv, .define, .loginDiv {
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.welcome {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.welcomeButtons tbody td {
+	text-align: center;
+}
+
+.welcomeButtons button {
+	float: none;
+}

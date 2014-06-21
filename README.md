@@ -1,4 +1,4 @@
-chess-contests
+contest-masters
 ==============
 
-Portal turniejów szachowych
+Portal turniejowy
