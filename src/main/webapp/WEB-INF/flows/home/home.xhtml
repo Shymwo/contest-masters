@@ -6,11 +6,11 @@
 	xmlns:p="http://primefaces.org/ui"
 	template="/WEB-INF/layouts/standard.xhtml">
 
-<ui:define name="title">Strona główna</ui:define>
+<ui:define name="title">#{msg['home.title']}</ui:define>
 
 <ui:define name="content">
 
-	<div class="homeDiv">
+	<div class="centerDiv">
 		<br />
 		<h:outputText styleClass="welcome" value="#{msg['home.message1']}" /><br />
 		<br />

@@ -26,7 +26,7 @@
 	font-size: 14px;
 }
 
-.homeDiv, .define, .loginDiv {
+.centerDiv, .define {
 	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
@@ -44,4 +44,9 @@
 
 .welcomeButtons button {
 	float: none;
+}
+
+.ui-button {
+	padding: 0px !important;
+	float: none !important;
 }

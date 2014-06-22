@@ -25,6 +25,8 @@
 		        	<h:outputText styleClass="loginName" value="#{loginBean.username}" />
 		        	<h:outputLink rendered="#{loginBean.username != 'anonymousUser'}"
 		        		value="logout"><h:outputText value="#{msg['login.logout']}" /></h:outputLink>
+		        	<h:outputLink rendered="#{loginBean.username == 'anonymousUser'}"
+		        		value="register"><h:outputText value="Zarejestruj się" /></h:outputLink>
 		        </h:panelGrid>
 		    </p:layoutUnit>
 

@@ -11,7 +11,7 @@
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost/ai-turnieje?characterEncoding=utf8</property>
 		<property name="connection.username">shymwo</property>
-		<property name="connection.password">windie7</property>
+		<property name="connection.password">shymwo</property>
         <property name='connection.pool_size'>1</property>
         <property name='dialect'>org.hibernate.dialect.MySQLDialect</property>
 

@@ -7,10 +7,10 @@
 	  			xmlns:p="http://primefaces.org/ui"
 				template="/WEB-INF/layouts/standard.xhtml">
 
-<ui:define name="title">Logowanie</ui:define>
+<ui:define name="title">#{msg['login.title']}</ui:define>
 
 <ui:define name="content">
-	<div class="loginDiv">
+	<div class="centerDiv">
 		<c:if test="${not empty param.login_error}">
 			<div class="error">
 				<h:outputText value="#{sessionScope.SPRING_SECURITY_LAST_EXCEPTION.message}" />
@@ -22,7 +22,7 @@
 		        <p:inputText id="j_username" name="j_username" />
 		        <p:outputLabel for="j_password" value="#{msg['login.pass']}" />
 		        <p:password id="j_password" name="j_password"/>
-		        <span />
+		        <p:commandLink action="forgotPass" value="#{msg['login.forgot']}" />
 		        <p:commandButton id="submit" value="#{msg['login.button']}" ajax="false"/>
 		    </h:panelGrid>
 		</h:form>
