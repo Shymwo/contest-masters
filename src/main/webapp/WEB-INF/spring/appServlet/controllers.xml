@@ -14,7 +14,7 @@
 			UrlBasedViewResolver in servlet-context resolves 'home' to /WEB-INF/views/home.xhtml
 	-->
 
-<!-- 	<mvc:view-controller path="/login" /> -->
+	<mvc:view-controller path="/login" />
 
 <!-- 	<mvc:view-controller path="/home" /> -->
 

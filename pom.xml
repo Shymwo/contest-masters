@@ -39,6 +39,11 @@
 			<version>${springframework-version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${springframework-version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.webflow</groupId>
 			<artifactId>spring-faces</artifactId>
 			<version>${springwebflow-version}</version>

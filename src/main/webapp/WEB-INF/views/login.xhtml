@@ -22,7 +22,7 @@
 		        <p:inputText id="j_username" name="j_username" />
 		        <p:outputLabel for="j_password" value="#{msg['login.pass']}" />
 		        <p:password id="j_password" name="j_password"/>
-		        <p:commandLink action="forgotPass" value="#{msg['login.forgot']}" />
+		        <p:link href="forgotPass" value="#{msg['login.forgot']}" />
 		        <p:commandButton id="submit" value="#{msg['login.button']}" ajax="false"/>
 		    </h:panelGrid>
 		</h:form>
