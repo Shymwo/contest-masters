@@ -15,19 +15,23 @@
 			<p:messages id="messages" autoUpdate="true" />
 
 		    <h:panelGrid columns="2">
-			<p:outputLabel for="username" value="#{msg['register.user']}" />
-			<p:inputText id="username" required="true" />
+
+			<p:outputLabel for="email" value="#{msg['register.email']}" />
+			<p:inputText id="email" required="true">
+				<f:validator validatorId="custom.emailValidator" />
+			</p:inputText>
 
 			<h:outputLabel for="pwd1" value="#{msg['register.pass1']}" />
 			<p:password id="pwd1" match="pwd2" label="#{msg['register.pass1label']}" required="true"
 				feedback="true" promptLabel="#{msg['register.enterPass']}" weakLabel="#{msg['register.weak']}"
 				goodLabel="#{msg['register.good']}" strongLabel="#{msg['register.strong']}" />
-
 			<h:outputLabel for="pwd2" value="#{msg['register.pass2']}" />
 			<p:password id="pwd2" label="#{msg['register.pass2label']}" required="true" />
 
-			<p:outputLabel for="email" value="#{msg['register.email']}" />
-			<p:inputText id="email" required="true" />
+			<p:outputLabel for="name" value="#{msg['register.name']}" />
+			<p:inputText id="name" required="true" />
+			<p:outputLabel for="surname" value="#{msg['register.surname']}" />
+			<p:inputText id="surname" required="true" />
 			<span />
 			<p:commandButton id="register" value="#{msg['register.register']}"
 				update="registerForm" action="register" />

@@ -12,6 +12,8 @@
 		Configure Spring Security
 	-->
 
+	<import resource="data-source.xml"/>
+
 	<bean id="messageSource"
 	    class="org.springframework.context.support.ResourceBundleMessageSource">
 	    <property name="basenames">
@@ -19,15 +21,6 @@
 	            <value>security_pl</value>
 	        </list>
 	    </property>
-	</bean>
-
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost/ai-turnieje?characterEncoding=utf8" />
-		<property name="username" value="shymwo" />
-		<property name="password" value="shymwo" />
 	</bean>
 
 	<security:http auto-config="true" use-expressions="true">

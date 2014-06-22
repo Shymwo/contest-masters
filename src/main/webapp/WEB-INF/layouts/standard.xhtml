@@ -22,10 +22,10 @@
 		        <img class="logo" src="${request.contextPath}/images/logo_small.png" />
 		        <h:panelGrid styleClass="loginInfo" columns="1">
 		        	<h:outputText value="#{msg['login.loggedAs']}" />
-		        	<h:outputText styleClass="loginName" value="#{loginBean.username}" />
-		        	<h:outputLink rendered="#{loginBean.username != 'anonymousUser'}"
+		        	<h:outputText styleClass="loginName" value="#{loginUtil.username}" />
+		        	<h:outputLink rendered="#{loginUtil.username != 'anonymousUser'}"
 		        		value="logout"><h:outputText value="#{msg['login.logout']}" /></h:outputLink>
-		        	<h:outputLink rendered="#{loginBean.username == 'anonymousUser'}"
+		        	<h:outputLink rendered="#{loginUtil.username == 'anonymousUser'}"
 		        		value="register"><h:outputText value="Zarejestruj się" /></h:outputLink>
 		        </h:panelGrid>
 		    </p:layoutUnit>

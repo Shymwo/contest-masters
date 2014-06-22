@@ -9,9 +9,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-@ManagedBean
+@ManagedBean(name = "loginUtil")
 @SessionScoped
-public class LoginBean implements Serializable {
+public class LoginUtil implements Serializable {
 
 	private static final long serialVersionUID = -3708038522185767920L;
 

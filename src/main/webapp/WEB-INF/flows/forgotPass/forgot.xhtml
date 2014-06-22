@@ -15,7 +15,8 @@
 			<h:outputText value="#{msg['forgot.email']}" />
 			<p:inputText />
 			<span />
-			<p:commandButton action="reset" value="#{msg['forgot.send']}" />
+			<p:commandButton action="reset" value="#{msg['forgot.send']}"
+				actionListener="#{forgotPassBean.reset}" />
 		</h:panelGrid>
 	</h:form>
 </ui:define>

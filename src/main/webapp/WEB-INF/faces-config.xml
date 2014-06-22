@@ -17,10 +17,4 @@
 		</message-bundle>
 	</application>
 
-	<managed-bean>
-		<managed-bean-name>loginBean</managed-bean-name>
-		<managed-bean-class>put.poznan.ai.common.LoginBean</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-
 </faces-config>
