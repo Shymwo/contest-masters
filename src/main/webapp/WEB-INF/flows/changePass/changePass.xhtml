@@ -7,18 +7,16 @@
 	  			xmlns:p="http://primefaces.org/ui"
 				template="/WEB-INF/layouts/standard.xhtml">
 
-<ui:define name="title">#{msg['register.title']}</ui:define>
+<ui:define name="title">#{msg['changePass.title']}</ui:define>
 
 <ui:define name="content">
 	<div class="centerDiv">
-		<h:form id="registerForm">
+		<h:form id="changePassForm">
 		    <h:panelGrid columns="2">
 
-			<p:outputLabel for="email" value="#{msg['register.email']}" />
-			<p:inputText id="email" value="#{registerBean.user.username}" required="true">
-				<f:validator validatorId="custom.emailValidator" />
-			</p:inputText>
-
+			<h:outputLabel for="oldpwd" value="#{msg['changePass.oldpass']}" />
+			<p:password id="oldpwd" label="#{msg['changePass.oldpassLabel']}" required="true"
+				value="#{registerBean.oldPass}" />
 			<h:outputLabel for="pwd1" value="#{msg['register.pass1']}" />
 			<p:password id="pwd1" match="pwd2" label="#{msg['register.pass1label']}" required="true"
 				feedback="true" promptLabel="#{msg['register.enterPass']}" weakLabel="#{msg['register.weak']}"
@@ -27,13 +25,8 @@
 			<h:outputLabel for="pwd2" value="#{msg['register.pass2']}" />
 			<p:password id="pwd2" label="#{msg['register.pass2label']}" required="true" />
 
-			<p:outputLabel for="name" value="#{msg['register.name']}" />
-			<p:inputText id="name" required="true" value="#{registerBean.user.name}" />
-			<p:outputLabel for="surname" value="#{msg['register.surname']}" />
-			<p:inputText id="surname" required="true" value="#{registerBean.user.surname}" />
-			<span />
-			<p:commandButton id="register" value="#{msg['register.register']}"
-				update="registerForm" action="#{registerBean.register}" />
+			<p:commandButton id="changePass" value="#{msg['changePass.change']}"
+				update="changePassForm" action="#{registerBean.changePass}" />
 		    </h:panelGrid>
 		</h:form>
 	</div>

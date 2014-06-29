@@ -153,12 +153,12 @@
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.2.6</version>
+			<version>2.1.28</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>2.2.6</version>
+			<version>2.1.28</version>
 		</dependency>
 
 		<!-- PrimeFaces component library -->
@@ -212,6 +212,13 @@
 		    <artifactId>mail</artifactId>
 		    <version>1.4.7</version>
 	    </dependency>
+
+	    <!-- Commons -->
+	    <dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
 
 		<!-- Test -->
 		<dependency>

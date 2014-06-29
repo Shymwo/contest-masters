@@ -15,6 +15,12 @@
 		<ui:insert name="headIncludes"/>
 	</h:head>
 	<h:body style="font-family: Arial">
+	
+		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+	 
+		<p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+		    <img src="${request.contextPath}/images/ajax-loader.gif" />
+		</p:dialog>
 
 		<p:layout fullPage="true">
 
@@ -23,10 +29,18 @@
 		        <h:panelGrid styleClass="loginInfo" columns="1">
 		        	<h:outputText value="#{msg['login.loggedAs']}" />
 		        	<h:outputText styleClass="loginName" value="#{loginUtil.username}" />
-		        	<h:outputLink rendered="#{loginUtil.username != 'anonymousUser'}"
-		        		value="logout"><h:outputText value="#{msg['login.logout']}" /></h:outputLink>
-		        	<h:outputLink rendered="#{loginUtil.username == 'anonymousUser'}"
-		        		value="register"><h:outputText value="Zarejestruj się" /></h:outputLink>
+		        	<h:panelGrid styleClass="loginLinks" columns="3" rendered="#{loginUtil.username != 'anonymousUser'}">
+		        		<h:outputLink
+			        		value="changePass"><h:outputText value="#{msg['login.changePass']}" /></h:outputLink>
+			        	<h:outputText value=" | " />
+			        	<h:outputLink value="logout"><h:outputText value="#{msg['login.logout']}" /></h:outputLink>
+		        	</h:panelGrid>
+		        	<h:panelGrid styleClass="loginLinks" columns="3" rendered="#{loginUtil.username == 'anonymousUser'}">
+			        	<h:outputLink 
+			        		value="register"><h:outputText value="#{msg['login.register']}" /></h:outputLink>
+			        	<h:outputText value=" | " />
+			        	<h:outputLink value="login"><h:outputText value="#{msg['login.login']}" /></h:outputLink>
+		        	</h:panelGrid>
 		        </h:panelGrid>
 		    </p:layoutUnit>
 
@@ -39,6 +53,9 @@
 <!-- 		    </p:layoutUnit> -->
 
 		    <p:layoutUnit position="center">
+		    	<div class="centerDiv">
+		    		<p:messages id="messages" showDetail="true" autoUpdate="true" />
+		    	</div>
 		        <ui:insert name="content"/>
 		    </p:layoutUnit>
 

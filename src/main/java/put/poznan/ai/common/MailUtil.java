@@ -7,15 +7,19 @@ public class MailUtil {
 
 	private MailSender mailSender;
 
+	private static final String PORTAL_MAIL = "ai.contest.masters@gmail.com";
+
+	public static final String HOST = "http://localhost:8080/contest-masters";
+
 	public void setMailSender(MailSender mailSender) {
 		this.mailSender = mailSender;
 	}
 
-	public void sendMail(String from, String to, String subject, String msg) {
+	public void sendMail(String to, String subject, String msg) {
 
 		SimpleMailMessage message = new SimpleMailMessage();
 
-		message.setFrom(from);
+		message.setFrom(PORTAL_MAIL);
 		message.setTo(to);
 		message.setSubject(subject);
 		message.setText(msg);

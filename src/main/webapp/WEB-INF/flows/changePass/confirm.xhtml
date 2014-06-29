@@ -7,16 +7,13 @@
 	  			xmlns:p="http://primefaces.org/ui"
 				template="/WEB-INF/layouts/standard.xhtml">
 
-<ui:define name="title">#{msg['forgot.title']}</ui:define>
+<ui:define name="title">#{msg['changePass.confirm']}</ui:define>
 
 <ui:define name="content">
 	<h:form class="centerDiv">
-		<h:panelGrid columns="2">
-			<h:outputText value="#{msg['forgot.email']}" />
-			<p:inputText value="#{forgotPassBean.user.username}" />
-			<span />
-			<p:commandButton action="#{forgotPassBean.reset}" value="#{msg['forgot.send']}" />
-		</h:panelGrid>
+		<h:outputText value="#{msg['changePass.confirmText']}" />
+		<br />
+		<p:commandButton action="exit" value="#{msg['common.return']}" />
 	</h:form>
 </ui:define>
 </ui:composition>

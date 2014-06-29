@@ -6,6 +6,7 @@
 
 .ui-layout-north .ui-layout-unit-content {
 	background: inherit;
+	overflow: hidden;
 }
 
 .logo {
@@ -49,4 +50,8 @@
 .ui-button {
 	padding: 0px !important;
 	float: none !important;
+}
+
+.loginLinks {
+	margin-bottom: 0px !important;
 }

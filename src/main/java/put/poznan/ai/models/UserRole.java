@@ -16,6 +16,7 @@ public class UserRole implements Serializable {
 	private String user_role_id;
 	private String username;
 	private String role;
+	private String token;
 
 	@Id
 	@GeneratedValue
@@ -41,6 +42,14 @@ public class UserRole implements Serializable {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
 
 }

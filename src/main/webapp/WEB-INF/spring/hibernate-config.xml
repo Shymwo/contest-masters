@@ -26,6 +26,8 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>put.poznan.ai.models.Contest</value>
+				<value>put.poznan.ai.models.User</value>
+				<value>put.poznan.ai.models.UserRole</value>
 			</list>
 		</property>
 
